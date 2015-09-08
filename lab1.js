@@ -45,8 +45,8 @@ function assert(expression, failureMessage) {
  That will help later when you run jscs.
 */
 
-assert(1 === 1, '1 equals 1 - this assert will pass.');
-assert(1 === 2, 'this is an example of a failing assertion. 1 does not equal 2.');
+// assert(1 === 1, '1 equals 1 - this assert will pass.');
+// assert(1 === 2, 'this is an example of a failing assertion. 1 does not equal 2.');
 
 /* ===========================================================================
 ------------------Assertions (8 points total)---------------------------------
@@ -60,8 +60,10 @@ assert(1 === 2, 'this is an example of a failing assertion. 1 does not equal 2.'
 */
 
 //your code goes here
-// assert('apes' === 'apes', 'apes are apes');
-// assert('snakes' === 'birds', 'snakes are not birds' );
+var apes = 'apes';
+var snakes = 'snakes';
+assert(apes === 'apes', 'apes are apes');
+assert(snakes === 'birds', 'snakes are not birds');
 // console.log ("Hello World");
 
 
@@ -88,11 +90,11 @@ var sentence2 = 'Come over here so you can scratch my belly.';
 var sentence1Array = sentence1.split(' ');
 
 for (var i = 0; i < sentence1Array.length; i++) {
-  sentence1Array[i] = "chirp";
+  sentence1Array[i] = 'chirp';
 }
 var newSentence1Array = sentence1Array.join(' ');
 // console.log ("newSentence1Array "+ newSentence1Array);
-sentence1 = newSentence1Array + ".";
+sentence1 = newSentence1Array + '.';
 
 
 
@@ -102,20 +104,20 @@ sentence1 = newSentence1Array + ".";
 // your code goes here
 var sentence2Array = sentence2.split(' ');
 var i = 0;
-while ( i < sentence2Array.length) {
-  sentence2Array[i] = "chirp";
+while (i < sentence2Array.length) {
+  sentence2Array[i] = 'chirp';
   i++;
 }
 var newSentence2Array = sentence2Array.join(' ');
 // console.log ("newSentence2Array "+ newSentence2Array);
-sentence2 = newSentence2Array + ".";
+sentence2 = newSentence2Array + '.';
 
 
 // Leave these assertions as-is! If they pass, your code works.
 // console.log("sentence1 " + sentence1)
-assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
+assert(sentence1 === 'chirp chirp chirp.' , 'sentence 1 should have 3 chirps');
 // console.log ("Sentence 2 Output " + sentence2);
-assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.','sentence 2 should have 9 chirps');
+assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.' , 'sentence 2 should have 9 chirps');
 
 /* ========================================================================
 ----------------- Favorite Animals (10 points)-----------------------------
@@ -137,7 +139,7 @@ var nextAnimal;
 // your code goes here
 
 
-nextAnimal = favoriteAnimals[Math.floor(Math.random()*favoriteAnimals.length)];
+nextAnimal = favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)];
 
 assert(nextAnimal, 'assign something to nextAnimal');
 
